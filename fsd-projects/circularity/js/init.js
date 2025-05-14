@@ -29,16 +29,22 @@ var init = function (window) {
 
             // create the circle
             //randomCircleInArea(area, randomizeAlpha, addCross, borderColor, borderThickness, randomRadialProps)
-            circle = draw.randomCircleInArea(canvas, true, true, '#999' 2);
+            circle = draw.randomCircleInArea(canvas, true, true, '#999', 2);
             
             // set motion properties
-
+            physikz.addRandomVelocity(circle, canvas);
             // add the circle to circles array, add to view
+            circles.push(circle);
+            view.addChild(circle);
         }
 
 
         // TODO 3 : Call the drawCircle() function
-
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
+        drawCircle();
 
 
         // TODO 7 : Use a loop to create multiple circles
@@ -57,11 +63,19 @@ var init = function (window) {
         */
         function update() {
             // TODO 4 : Update the position of each circle using physikz.updatePosition()
-
+                physikz.updatePosition(circles[0]);
+                physikz.updatePosition(circles[1]);
+                physikz.updatePosition(circles[2]);
+                physikz.updatePosition(circles[3]);
+                physikz.updatePosition(circles[4]);
             
             // TODO 5 : Call game.checkCirclePosition() on your circles
-           
+            canvas.width
+            canvas.height
 
+            circle.x
+            circle.y
+            circle.radius
             // TODO 8 / TODO 9 : Iterate over the array
            
             
